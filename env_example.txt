@@ -1,0 +1,30 @@
+# ============================================
+# 小红书博主笔记采集 API 服务 - 环境变量配置
+# ============================================
+# 复制此文件为 .env 并填写实际配置
+
+# --------------------------------------------
+# 飞书多维表格授权码（PersonalBaseToken）
+# --------------------------------------------
+# 获取方式：打开多维表格 → 右上角「...」菜单 → 获取授权码
+# 注意：授权码永久有效，请勿公开传播
+FEISHU_PERSONAL_BASE_TOKEN=pt-xxxxxxxxxxxxxxxxxxxxxx
+
+# --------------------------------------------
+# API Key 管理表格配置
+# --------------------------------------------
+# 从飞书多维表格链接中提取
+# 链接格式: https://xxx.feishu.cn/base/{APP_TOKEN}?table={TABLE_ID}
+FEISHU_APIKEY_APP_TOKEN=Vw2tbkrgVabe9os2UWrcg9jJnEc
+FEISHU_APIKEY_TABLE_ID=tblEP9RUcXYN3aAR
+
+# --------------------------------------------
+# 关键词采集默认写入表格链接
+# --------------------------------------------
+DEFAULT_FEISHU_TABLE_URL=https://gcn6bvkburhk.feishu.cn/base/L5yObKSElaxLxUsmgM7cwR2unyd?table=tblwDly8JAMpzhmA&view=vewYP6e30Y
+
+# --------------------------------------------
+# 服务配置
+# --------------------------------------------
+# 调试模式（开发环境设为 true）
+DEBUG=false
