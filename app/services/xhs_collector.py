@@ -247,14 +247,21 @@ class XhsCollector:
         }
         
         sign_headers = signer.sign_headers_get(api_url, self.cookie, params=params)
-        
+
         headers = {
-            "accept": "application/json, text/plain, */*",
-            "accept-language": "zh-CN,zh;q=0.9",
-            "cookie": self.cookie,
-            "origin": "https://www.xiaohongshu.com",
-            "referer": f"https://www.xiaohongshu.com/user/profile/{user_id}",
-            "user-agent": self.user_agent,
+            "Accept": "application/json, text/plain, */*",
+            "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Cookie": self.cookie,
+            "Origin": "https://www.xiaohongshu.com",
+            "Referer": f"https://www.xiaohongshu.com/user/profile/{user_id}",
+            "User-Agent": self.user_agent,
+            "Sec-Fetch-Dest": "empty",
+            "Sec-Fetch-Mode": "cors",
+            "Sec-Fetch-Site": "same-site",
+            "Sec-Ch-Ua": '"Google Chrome";v="143", "Chromium";v="143", "Not-A.Brand";v="99"',
+            "Sec-Ch-Ua-Mobile": "?0",
+            "Sec-Ch-Ua-Platform": '"macOS"',
         }
         headers.update(sign_headers)
         
@@ -402,10 +409,18 @@ class XhsCollector:
         headers = {
             "Content-Type": "application/json;charset=UTF-8",
             "Accept": "application/json, text/plain, */*",
+            "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+            "Accept-Encoding": "gzip, deflate, br",
             "Origin": "https://www.xiaohongshu.com",
             "Referer": f"https://www.xiaohongshu.com/search_result?keyword={quote(keyword)}",
             "User-Agent": self.user_agent,
             "Cookie": self.cookie,
+            "Sec-Fetch-Dest": "empty",
+            "Sec-Fetch-Mode": "cors",
+            "Sec-Fetch-Site": "same-site",
+            "Sec-Ch-Ua": '"Google Chrome";v="143", "Chromium";v="143", "Not-A.Brand";v="99"',
+            "Sec-Ch-Ua-Mobile": "?0",
+            "Sec-Ch-Ua-Platform": '"macOS"',
         }
         headers.update(sign_headers)
 
@@ -799,10 +814,18 @@ class XhsCollector:
         headers = {
             "Content-Type": "application/json;charset=UTF-8",
             "Accept": "application/json, text/plain, */*",
+            "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+            "Accept-Encoding": "gzip, deflate, br",
             "Origin": "https://www.xiaohongshu.com",
             "Referer": f"https://www.xiaohongshu.com/explore/{note_info.noteId}",
             "User-Agent": self.user_agent,
             "Cookie": self.cookie,
+            "Sec-Fetch-Dest": "empty",
+            "Sec-Fetch-Mode": "cors",
+            "Sec-Fetch-Site": "same-site",
+            "Sec-Ch-Ua": '"Google Chrome";v="143", "Chromium";v="143", "Not-A.Brand";v="99"',
+            "Sec-Ch-Ua-Mobile": "?0",
+            "Sec-Ch-Ua-Platform": '"macOS"',
         }
         headers.update(sign_headers)
         
